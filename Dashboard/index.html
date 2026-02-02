@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrackMyCustomer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- TEXT LOGO ONLY -->
+    <div class="logo">
+      <h1>TrackMyCustomer</h1>
+      <p>Dashboard</p>
+    </div>
+
+    <div class="menu">
+      <a class="active">Dashboard</a>
+      <a> Customers</a>
+      <a>Enquiries</a>
+      <a>Follow Up </a>
+      <a>Leads</a>
+      <a> Quotation</a>
+    </div>
+
+    <div class="quick-actions">
+      <h4>QUICK ACTIONS</h4>
+      <button class="quick-btn">+ Add Customer</button>
+      <button class="quick-btn">+ Add Enquiry</button>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <header class="header">
+      <input class="search" placeholder="Search customers, enquiries, tasks...">
+      <div class="avatar">A</div>
+    </header>
+
+    <div class="content">
+
+      <!-- SLIDER -->
+      <div class="slider">
+        <div class="slides" id="slides">
+
+          <div class="slide blue">
+            <div>
+              <h2>Calculate Your Profit</h2>
+              <p>Track and analyze your monthly earnings</p>
+              <button>View Report</button>
+            </div>
+          </div>
+
+          <div class="slide green">
+            <div>
+              <h2>Track Your Customer</h2>
+              <p>Monitor customer activities and engagement</p>
+              <button>View Customers</button>
+            </div>
+          </div>
+
+          <div class="slide purple">
+            <div>
+              <h2>Attract Leads</h2>
+              <p>Grow your business with quality leads</p>
+              <button>Get Started</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat"><small>Total Customers</small><strong>1028</strong></div>
+        <div class="stat"><small>Active Enquiries</small><strong>224</strong></div>
+        <div class="stat"><small>Pending Follow-ups</small><strong>169</strong></div>
+        <div class="stat"><small>Outstanding</small><strong>$225K</strong></div>
+      </div>
+
+      <!-- TODAY ACTIONS -->
+      <div class="today">
+        <h3>Today's Actions</h3>
+
+        <div class="today-grid">
+          <div class="today-card blue">
+            <h4>Today's Follow-ups</h4>
+            <strong>24</strong>
+          </div>
+
+          <div class="today-card red">
+            <h4>Payment Overdue</h4>
+            <strong>12</strong>
+          </div>
+
+          <div class="today-card green">
+            <h4>New Leads</h4>
+            <strong>8</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
