@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+}
+
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar input {
+  width: 300px;
+  padding: 10px;
+}
+#dlt{
+    position: relative;
+    height: 20px;
+    width: 25px;
+    left: 80;
+}
+.delete{
+    position: relative;
+    left: 31%;
+    width: 40px;
+    border-radius: 6px;
+    border:none;
+    background-color:#ddd;
+    cursor: pointer;
+}
+.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+
+.customer-list {
+  width: 40%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.customer {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.customer.active {
+  background: #f0f5ff;
+}
+
+.badge {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.warning { background: #fde68a; }
+.info { background: #bfdbfe; }
+.danger { background: #fecaca; }
+
+
+.details {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.actions {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.actions button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e5e7eb;
+}
+
+.actions .success  {
+  background: #22c55e;
+  color: white;
+}
+
+.history ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#Pay{
+    background: #22c55e;
+  color: white;
+}
+

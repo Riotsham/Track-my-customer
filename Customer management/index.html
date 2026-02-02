@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Management Module</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  
+  <main class="main">
+
+    <header class="topbar">
+      <input type="text" placeholder="Search customers..." />
+        <button class="delete"><img src="delete.png" id="dlt"></button>
+      <button class="primary">+ Add Enquiry</button>
+    
+    </header>
+
+    <div class="content">
+
+      <section class="customer-list">
+        <div class="customer active" onclick="selectCustomer('rajesh', this)">
+  <h4>Rajesh </h4>
+  <span class="badge warning">Follow Up Due</span>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+
+
+<div class="customer" onclick="selectCustomer('sam', this)">
+  <h4>Sam</h4>
+  <span class="badge info">Quote Sent</span>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+ </div>
+
+
+<div class="customer" onclick="selectCustomer('alen', this)">
+  <h4>Alen</h4>
+  <span class="badge danger">Payment Pending</span>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+
+<div class="customer" onclick="selectCustomer('edi', this)">
+  <h4>Edi</h4>
+  <p>Met yesterday</p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+
+<div class="customer" onclick="selectCustomer('dhanush', this)">
+  <h4>Dhanush</h4>
+  <p>Interested </p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+
+<div class="customer" onclick="selectCustomer('selva', this)">
+  <h4>Selva</h4>
+  <p>Interested </p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+<div class="customer" onclick="selectCustomer('yogesh', this)">
+  <h4>Yogesh</h4>
+  <p>Interested </p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+<div class="customer" onclick="selectCustomer('sridhar', this)">
+  <h4>Sridhar</h4>
+  <p>Interested </p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+<div class="customer" onclick="selectCustomer('mercy', this)">
+  <h4>Mercy</h4>
+  <p>Interested </p>
+  <img src="Phone (2).png" alt="Phone" class="customer-image">
+</div>
+
+      </section>   
+      <section class="details">
+       <h2 id="customerName">Customer Name</h2>
+<p id="customerDesc">status</p>
+<p><strong>Follow up:</strong> <span id="followUpDate">Date</span></p>
+
+
+        <div class="actions">
+          <button>Message</button>
+          <button>Send Quotation</button>
+          <button id="Pay"> Payment Status</button>
+          <button class="success">Set Follow-Up</button>
+        </div>
+
+        <div class="history">
+          <ul id="historyList"></ul>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
