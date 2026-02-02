@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Follow Up & Pending Payment</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Follow Up & Pending Payment</h1>
+
+<div class="container">
+
+  <!-- FOLLOW UP -->
+  <div class="card">
+    <h3><i class="fa-solid fa-phone"></i> Follow Up</h3>
+
+    <input id="fuName" placeholder="Customer Name">
+    <input id="fuDate" class="calendar">
+    <select id="fuStatus">
+      <option>Interested</option>
+      <option>Call Later</option>
+      <option>Not Interested</option>
+    </select>
+    <textarea id="fuNotes" placeholder="Notes"></textarea>
+
+    <button onclick="saveFollowUp()">
+      <i class="fa-solid fa-floppy-disk"></i> Save Follow Up
+    </button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Notes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="followUpTable"></tbody>
+    </table>
+  </div>
+
+  <!-- PENDING PAYMENT -->
+  <div class="card">
+    <h3><i class="fa-solid fa-credit-card"></i> Pending Payment</h3>
+
+    <input id="pName" placeholder="Customer Name">
+    <input id="totalAmt" type="number" placeholder="Total Amount">
+    <input id="paidAmt" type="number" placeholder="Paid Amount">
+    <input id="payDate" class="calendar">
+
+    <button onclick="savePending()">
+      <i class="fa-solid fa-floppy-disk"></i> Save Pending
+    </button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Total</th>
+          <th>Paid</th>
+          <th>Pending</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="pendingTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="script.js"></script>
+</body>
+</html>
