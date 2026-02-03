@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quotation Module</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="dashboard.html">
+  <button class="back-btn">⬅ Back to Dashboard</button>
+</a>
+
+<div class="header">Quotation Module</div>
+
+<div class="container">
+
+    <button class="green-btn" onclick="showCreate()">+ Create Quotation</button>
+
+    <!-- CUSTOMER LIST -->
+    <div id="listPage">
+
+        <div class="item" onclick="openCustomer('Imran','3 min ago','1500','30/01/2026','Quotation details here.','Complete before validity.')">
+            <div>
+                <div class="name">Imran</div>
+                <div class="time">3 min ago</div>
+            </div>
+            <div class="amount">Rs.1500</div>
+        </div>
+
+        <div class="item" onclick="openCustomer('Abinetri','1 hour ago','1000')"> 
+        <div> <div class="name">Abinetri</div>
+        <div class="time">1 hour ago</div> 
+        </div> 
+        <div class="amount">Rs.1000</div> 
+    </div> 
+    
+    <div class="item" onclick="openCustomer('Ravi','1 week ago','500')"> 
+    <div> <div class="name">Ravi</div>
+    <div class="time">1 week ago</div>
+    </div> <div class="amount">Rs.500</div> 
+    </div> 
+    
+    <div class="item" onclick="openCustomer('Ram','1 month ago','1550')"> 
+    <div> <div class="name">Ram</div> 
+    <div class="time">1 month ago</div> 
+    </div> <div class="amount">Rs.1550</div> </div> </div>
+
+    </div>
+
+    <!-- CREATE PAGE -->
+    <div id="createPage" class="hidden">
+        <h3>Create Quotation</h3>
+
+        <label>Name</label>
+        <input type="text" id="cname">
+
+        <label>Amount</label>
+        <input type="number" id="camount">
+
+        <label>Validity Date</label>
+        <input type="date" id="cdate">
+
+        <label>Description</label>
+        <textarea id="cdesc"></textarea>
+
+        <label>Note</label>
+        <textarea id="cnote"></textarea>
+
+        <button class="full-btn" onclick="saveQuotation()">Save</button>
+        <button class="full-btn" onclick="goHome()">Cancel</button>
+    </div>
+
+    <!-- DETAILS PAGE -->
+    <div id="detailPage" class="hidden">
+
+        <div class="row"><b>Name</b><div id="dname"></div></div>
+        <div class="row"><b>Message Time</b><div id="dtime"></div></div>
+        <div class="row"><b>Payment</b><div id="damount"></div></div>
+        <div class="row"><b>Validity Date</b><div id="ddate"></div></div>
+        <div class="row"><b>Description</b><div id="ddesc"></div></div>
+        <div class="row"><b>Note</b><div id="dnote"></div></div>
+
+        <button class="full-btn" onclick="download()">Download</button>
+        <button class="full-btn" onclick="shareWhatsApp()">Share via WhatsApp</button>
+
+        <h3 style="margin-top:20px;">History</h3>
+
+        <!-- Header Row -->
+        <div class="history-item header-row">
+            <div>Company</div>
+            <div>Date</div>
+            <div>Status / Amount</div>
+        </div>
+
+        <div class="history-item">
+            <div>ABC Company</div>
+            <div>15/12/25</div>
+            <div>Rs.1500</div>
+        </div>
+
+        <div class="history-item">
+            <div>BBB Company</div>
+            <div>10/12/25</div>
+            <div>Rs.1000</div>
+        </div>
+
+        <div class="history-item">
+            <div>BBB Company</div>
+            <div>5/12/25</div>
+            <div>Unpaid</div>
+        </div>
+
+        <button class="full-btn" onclick="goHome()">Back</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
