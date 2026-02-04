@@ -1,5 +1,7 @@
+@import url("../Dashboard/style.css");
+
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   margin: 20px;
   background: #f4f4f4;
 }
@@ -35,40 +37,70 @@ th {
   color: white;
 }
 
-.btn.wp { background: #25D366; }
-.btn.quote { background: #2196F3; }
-.btn.call { background: #4CAF50; }
-.btn.delete { background: #f44336; }
-.btn.add { background: #FF9800; }
+.btn.wp {
+  background: #25D366;
+}
+
+.btn.quote {
+  background: #2196F3;
+}
+
+.btn.call {
+  background: #4CAF50;
+}
+
+.btn.delete {
+  background: #f44336;
+}
+
+.btn.add {
+  background: #FF9800;
+}
 
 .quick-actions {
-  text-align: center;
+  /* text-align: center; */
   margin-top: 20px;
 }
 
-.form-container {
+/* Menu (shared with Dashboard) */
+/* Sidebar: logo top, menu center, quick-actions bottom */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
   background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 300px;
-  margin: 0 auto;
-  border-radius: 6px;
-  display: none;
+  border-right: 1px solid #e5e7eb;
+  /* padding: 20px; */
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-container h3 {
-  text-align: center;
+.menu {
+  padding: 16px;
+  flex: 1;
 }
 
-.form-container label {
+.menu a {
   display: block;
-  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  color: #374151;
+  text-decoration: none;
 }
 
-.form-container input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.menu a.active {
+  background: #eaf0ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Push page content to the right of the fixed sidebar */
+body > :not(.sidebar) {
+  margin-left: 280px;
 }

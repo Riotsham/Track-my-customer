@@ -21,30 +21,28 @@ function renderLeads() {
   });
 }
 
-// ✅ Stronger Email validation
+// ✅ Email validation using regex
 function isValidEmail(email) {
-  const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,20}$/;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
-// ✅ Phone validation (digits only, 10–15 length)
+// ✅ Phone validation (only digits, length 10–15)
 function isValidPhone(phone) {
   const regex = /^[0-9]{10,15}$/;
   return regex.test(phone);
 }
 
-function toggleForm() {
-  const formContainer = document.getElementById("leadFormContainer");
-  formContainer.style.display = formContainer.style.display === "none" || formContainer.style.display === "" ? "block" : "none";
-}
+function addNewLead() {
+  const name = prompt("Enter lead name:");
+  const phone = prompt("Enter phone number:");
+  const email = prompt("Enter email:");
+  const status = prompt("Enter status:");
 
-function saveLead(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const status = document.getElementById("status").value.trim();
+  if (!name || !phone || !email || !status) {
+    alert("⚠️ All fields are required!");
+    return;
+  }
 
   if (!isValidPhone(phone)) {
     alert("❌ Invalid phone number! Must be 10–15 digits.");
@@ -58,14 +56,11 @@ function saveLead(event) {
 
   leads.push({ name, phone, email, status });
   renderLeads();
-
-  // Reset form
-  document.getElementById("leadForm").reset();
-  toggleForm();
 }
 
 function openWhatsApp(index) {
   alert(`Opening WhatsApp chat with ${leads[index].name} (${leads[index].phone})`);
+  // Example: window.open(`https://wa.me/${leads[index].phone}`, "_blank");
 }
 
 function sendQuotation(index) {
@@ -74,6 +69,7 @@ function sendQuotation(index) {
 
 function callLead(index) {
   alert(`Calling ${leads[index].name} (${leads[index].phone})`);
+  // Example: window.open(`tel:${leads[index].phone}`);
 }
 
 function deleteLead(index) {
@@ -81,5 +77,5 @@ function deleteLead(index) {
   renderLeads();
 }
 
-// Initial render
+// Initial render (empty list)
 renderLeads();
