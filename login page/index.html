@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+  <div class="card">
+    <div class="logo logo-main" aria-hidden="true">
+      <span class="logo-glyph"><span></span></span>
+    </div>
+    <h2>Welcome Back</h2>
+    <p>Enter your credentials to continue</p>
+
+    <div class="input-group">
+      <label>Email or Username</label>
+      <input class="with-icon email-input" type="text" id="email" placeholder="Enter your email or username">
+      <div class="error" id="emailError">Email is required</div>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input class="with-icon password-input" type="password" id="password" placeholder="Enter your password">
+      <div class="error" id="passError">Password is required</div>
+    </div>
+
+    <div class="row small">
+      <label class="remember">
+        <input type="radio" id="rememberMe">
+        <span>Remember me</span>
+      </label>
+      <a class="link" href="#">Forgot password?</a>
+    </div>
+
+    <button onclick="login()">Sign In</button>
+    <div class="create-account">
+      <span>Don't have an account?</span>
+      <button class="link-button" type="button" onclick="openCreateAccount()">Contact Admin</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Contact Administrator</h3>
+    <p>You don’t have access to this system.</p>
+    <button onclick="requestAccess()">Request Access</button>
+    <button class="secondary" onclick="closeModal()">Logout</button>
+  </div>
+</div>
+
+<div class="modal" id="createAccountModal">
+  <div class="modal-content">
+    <div class="logo logo-modal" aria-hidden="true">
+      <span class="logo-glyph"><span></span></span>
+    </div>
+    <h3>Contact Administrator</h3>
+    <p>To create an account, please contact the administrator.</p>
+    <div class="contact-card">
+      <div class="contact-title">Pargavan Pvt Ltd</div>
+      <div class="contact-sub">Contact admin to request account creation</div>
+    </div>
+    <button onclick="closeCreateAccount()">I Understand</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
